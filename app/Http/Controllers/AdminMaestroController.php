@@ -15,10 +15,10 @@ class AdminMaestroController extends CBController {
 		$this->addDatetime("Updated At","updated_at")->required(false)->showAdd(false)->showEdit(false);
 		$this->addText("Descripcion","descripcion")->filterable(true)->strLimit(150)->maxLength(255);
     // Custom field with raw html
-        $this->addCustom("fecha")->setHtml(
+    /*    $this->addCustom("fecha")->setHtml(
                     "<input type='text' class='form-control' name='foo'/>"
-                );
- // $this->addDate("Birthday","fecha");
+                );*/
+     $this->addDate("Birthday","fecha")->format("d/m/Y");
 
     /**
         * First parameter is sub module name
